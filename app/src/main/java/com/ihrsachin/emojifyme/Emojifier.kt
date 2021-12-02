@@ -19,7 +19,7 @@ class Emojifier {
         val detector = FaceDetection.getClient()
 
         val result = detector.process(mlImage).addOnCompleteListener{
-            Toast.makeText(context, "${it.result.size}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Number of faces: ${it.result.size}", Toast.LENGTH_LONG).show()
         }
     }
 }
