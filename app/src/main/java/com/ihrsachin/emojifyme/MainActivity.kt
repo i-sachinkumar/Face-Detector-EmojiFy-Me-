@@ -168,10 +168,7 @@ class MainActivity : AppCompatActivity() {
         mResultsBitmap = BitmapUtils().resamplePic(this, mTempPhotoPath)
 
         // Set the new bitmap to the ImageView
-        mImageView!!.setImageBitmap(mResultsBitmap)
-
-        // detect faces in image
-        Emojifier().detectFaces(this,mResultsBitmap)
+        mImageView!!.setImageBitmap(Emojifier().detectFacesAndOverlayEmoji(this,mResultsBitmap))
     }
 
 
